@@ -30,13 +30,16 @@ return longest
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
-function sumNumbers() {}
+function sumNumbers(numbers){
+  const sum = numbers.reduce(function (pv,cv){return pv + cv;}, 0)
+  return sum;
+}
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(array) {}
+   
 
 
 
