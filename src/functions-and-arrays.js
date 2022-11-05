@@ -38,7 +38,27 @@ function sumNumbers(numbers){
 
 
 // Iteration #3.1 Bonus:
-function sum(array) {}
+const mixedArr = [6, 12, 'miami',[1,2,3], 1, true, 'barca', '200', 'lisboa', 8, 10, 
+ { "color": "purple",
+  "type": "minivan"}]
+
+
+function sum(mix) {
+  if (mix.length === 0) return 0;
+  let mixedSum = 0;
+  for (element of mix) {
+    if (typeof element === 'string') {
+      mixedSum += element.length;
+    } else if (Array.isArray(element) || typeof element === 'object') {  
+    throw new Error('Error!');
+    } else {mixedSum += element }
+  }
+  return mixedSum;
+};
+
+console.log(sum(mixedArr))
+  
+
    
 
 
@@ -148,4 +168,9 @@ if (typeof module !== 'undefined') {
     howManyTimes,
     greatestProduct
   };
+}
+
+
+for (let i=0; i<=30; i++){
+
 }
