@@ -208,7 +208,7 @@ function greatestProduct(matrix) {
   let finalProduct = 0;
   const rowCount = matrix.length;
   const columnCount = matrix[0].length;
-    for (i=0; i<rowCount;i++){
+    for (i=0; i<columnCount;i++){
       for (let j=0; j<columnCount-3;j++){
         let rowProduct = matrix[j][i]*matrix[j+1][i]*matrix[j+2][i]*matrix[j+3][i];
         if (rowProduct>finalProduct) {
@@ -218,8 +218,8 @@ function greatestProduct(matrix) {
     }
   
     for (i=0;i<columnCount;i++){
-      for (let e=0;e<rowCount-3;e++){
-        let columnProduct= matrix[e][i]*matrix[e+1][i]*matrix[e+2][i]*matrix[e+3][i]
+      for (let k=0;k<rowCount-3;k++){
+        let columnProduct= matrix[k][i]*matrix[k+1][i]*matrix[k+2][i]*matrix[k+3][i]
         if (columnProduct>finalProduct){
           finalProduct=columnProduct
         }
